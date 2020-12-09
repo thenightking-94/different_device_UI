@@ -1,0 +1,221 @@
+#nav {
+  z-index: 2;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  background-color: #d51a13;
+  height: 60px;
+  text-align: center;
+  -webkit-animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+#paper_component {
+  border-radius: none !important;
+  background-color: #ad1b02;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  margin-top: 15px;
+  width: 40%;
+}
+.searchbox {
+  background-color: #ad1b02;
+  border: none;
+  border-radius: none !important;
+  outline: none;
+  margin-top: 15px;
+  color: white;
+  width: 90%;
+}
+#divider_component {
+  z-index: 2;
+  top: 60px;
+  position: fixed;
+  width: 100%;
+  background-color: #ad1b02;
+  height: 35px;
+}
+#left_aligned_box_component {
+  width: 8% !important;
+  position: fixed;
+  left: 10px;
+  height: 30px;
+  background-color: #222222;
+  top: 15px;
+  z-index: 3;
+  border-radius: 2px;
+  color: #222222;
+  -webkit-animation: scale-in-center 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: scale-in-center 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+#background_compo {
+  background: url("../assets/B&W_bg.jpg");
+  width: 100%;
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+}
+#body_grid_container {
+  padding-top: 100px;
+}
+#first_grid {
+  padding-left: 100px;
+}
+.second_body_container {
+  z-index: 3 !important;
+  margin-top: -40px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+#grid1 {
+  background: #35d3b4;
+}
+#grid2 {
+  background: #1b2191;
+}
+#grid3 {
+  background: #d822ee;
+}
+#grid1,
+#grid2,
+#grid3 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: lighter;
+  color: white;
+  border: 10px solid white;
+  border-radius: 4px;
+  box-shadow: 5px 8px 8px #888;
+  width: 100%;
+  height: 150px;
+
+  -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@-webkit-keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#center_text {
+  margin-top: 10% !important;
+}
+#footer {
+  background-image: linear-gradient(to right, #333333, black);
+  width: 100%;
+  height: 200px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+#footer_head {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+#footer_text {
+  font-size: 13px;
+  font-weight: lighter;
+}
+
+/* media-query for mobile devices*/
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 400px) {
+  #paper_component {
+    width: 85% !important;
+    margin-left: 10% !important;
+  }
+  #first_grid {
+    padding-left: 25px;
+  }
+  .second_body_container {
+    margin-top: 70px !important;
+    padding: 0px;
+  }
+  #center_text {
+    display: none;
+  }
+  #grid4 {
+    border: none;
+    border-radius: 4px;
+    box-shadow: 5px 8px 8px #888;
+    width: 100%;
+    height: 50px;
+    background-color: #006792;
+  }
+  #grid1,
+  #grid2,
+  #grid3 {
+    height: 50px !important;
+    border: none !important;
+  }
+  #footer {
+    flex-direction: column;
+  }
+  .image_grid {
+    text-align: center;
+  }
+}
+
+/*footer media query for tablets*/
+
+@media only screen and (min-device-width: 400px) and (max-device-width: 1024px) {
+  #footer {
+    bottom: 0px;
+    position: fixed;
+  }
+}
